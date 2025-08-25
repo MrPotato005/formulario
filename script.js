@@ -2,8 +2,9 @@ function validar() {
 	var nombre1 = document.getElementById("nombre1");
 	var nombre2 = document.getElementById("nombre2");
 	var cedula = document.getElementById("cedula")
-	var apellido = document.getElementById("apellido");
-	var email = document.getElementById("email");
+	var apellido1 = document.getElementById("apellido1");
+	var apellido2 = document.getElementById("apellido2");
+	var correo = document.getElementById("correo");
 	var sexo = document.getElementsByName("sexo");
 	var seleccionado = false;
 	var elementoCHECK = document.getElementById("terminos");
@@ -24,14 +25,20 @@ function validar() {
 
 
 
-	if (apellido.value.length == 0) {
-		alert("Debe ingresar el Apellido");
-		apellido.focus();
+	if (apellido1.value.length == 0) {
+		alert("Debe ingresar el Apellido Paterno");
+		apellido1.focus();
+		return false;
+	}
+
+	if (apellido2.value.length == 0) {
+		alert("Debe ingresar el Apellido Materno");
+		apellido2.focus();
 		return false;
 	}
 
 	if (email.value.length == 0) {
-		alert("Por favor, ingrese su Email");
+		alert("Por favor, ingrese su Correo Electronico");
 		email.focus();
 		return false;
 	}
